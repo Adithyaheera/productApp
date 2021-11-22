@@ -1,0 +1,16 @@
+.row{
+    width: 400px;
+    height: 600px;
+    border: 1px solid black;
+    margin-top: 300px;
+    margin-left: 500px;
+    text-align: center;
+    padding-top: 50px;
+    background-color: cadetblue;
+    text-align: center;
+    
+}
+.col-2{
+    text-align: center;
+}
+

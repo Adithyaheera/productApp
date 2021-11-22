@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div >
+
+
+<form [formGroup]="loginForm"  (ngSubmit)="login()" >
+    
+                <div>
+                    <input type="text" name="uname" id="uname" formControlName="uname"  placeholder="UserName or Email">
+                </div>
+                <div *ngIf="(this.loginForm.get('uname')?.touched||this.loginForm.get('uname')?.dirty )&&this.loginForm.get('uname')?.errors" class="error">Invalid Uname</div>
+
+                <div>
+                    <input type="text" name="pwd" id="pwd"  formControlName="pwd" placeholder="password">
+                </div>
+                <div *ngIf="(this.loginForm.get('pwd')?.touched||this.loginForm.get('pwd')?.dirty )&&this.loginForm.get('pwd')?.errors" class="error">Invalid password</div>
+
+                <div>
+                    <button class="btn-warning" name="buttonlogin" type="submit" >login</button>
+                </div>
+    
+
+</form>  
+
+        </div>
+
+<a routerLink="list">list page</a>
+
+    </div>
+</div>

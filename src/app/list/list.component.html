@@ -1,0 +1,41 @@
+<!-- <h2>welcome {{user}}</h2> -->
+
+
+<div class="container">
+    <div class="row" ng-controll ="user">
+
+<h2>USER LIST</h2>
+<div>
+    
+    <input type="text" name="find" id="find" placeholder="search user list"  >
+    <button class="btn-success">search</button>
+   
+
+</div>   
+
+<table border="2">
+<tr>
+<td ><strong> NAME</strong></td>
+<td><strong>PHONE</strong></td>
+<td><strong>PRODUCT NAME</strong></td>
+<td><strong>OPTION</strong></td>
+</tr>
+<tr *ngFor="let u of uname">
+    <td>{{u.uname}}</td>
+    <td>{{u.ph}}</td>
+    <td>{{u.productName}}</td>
+    <td>
+        <button>create</button>
+        <button>delete</button>
+        <button>update</button>
+
+    </td>
+    </tr>
+
+
+</table>
+
+
+
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+     <div class="col-2">
+
+<form [formGroup]="signupForm" (ngSubmit)="register()"  >
+    
+             <input type="text" name="uname" id="uname"  formControlName="uname"  placeholder="Name">
+            <div *ngIf="(this.signupForm.get('uname')?.touched||this.signupForm.get('uname')?.dirty )&&this.signupForm.get('uname')?.errors" class="error">Invalid Uname</div>
+             <div class="col-2">
+                <input type="text " name="email" id="email"   formControlName="email" placeholder="Email">
+            </div>
+            <div *ngIf="(this.signupForm.get('email')?.touched||this.signupForm.get('email')?.dirty)&&this.signupForm.get('email')?.errors" class="error">Invalid Email Id</div>
+           
+           
+            <div class="col-2">  
+                <input type="text" name="ph" id="ph" formControlName="ph" placeholder="Phone Number">
+            </div>
+            <div *ngIf="(this.signupForm.get('ph')?.touched||this.signupForm.get('ph')?.dirty)&&this.signupForm.get('ph')?.errors" class="error"> invalid phone number</div>
+            <div class="col-2">
+                <input type="text" name="pwd"  id="pwd"  formControlName="pwd" placeholder="Password">
+            </div>
+            <div *ngIf="(this.signupForm.get('pwd')?.touched||this.signupForm.get('pwd')?.dirty)&&this.signupForm.get('pwd')?.errors" class="error" > invalid password</div>
+            
+            <div class="col-2">
+              <button  class="btn btn-primary" name="signbutton"   type="submit" >SIGN UP</button>
+            </div>
+</form>
+         <a  routerLink="login">login</a>
+
+     </div>
+    
+    </div>
+</div>

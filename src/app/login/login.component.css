@@ -1,0 +1,11 @@
+.row{
+    width: 230px;
+    height: 250px;
+    border: 2px solid black;
+    margin-top: 300px;
+    margin-left: 500px;
+    padding-top: 30px;
+}
+.btn{
+    color:white;
+}
